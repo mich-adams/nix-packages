@@ -1,4 +1,24 @@
-{lib,stdenv,fetchFromGitea,cargo,meson,ninja,pkg-config,rustPlatform,rustc,wrapGAppsHook4,cairo,gdk-pixbuf,glib,gtk4,libadwaita,libshumate,pango,sqlite,darwin,alsa-lib,}:
+{
+lib,
+stdenv,
+fetchFromGitea,
+cargo,meson,
+ninja,
+pkg-config,
+rustPlatform,
+rustc,
+wrapGAppsHook4,
+cairo,
+gdk-pixbuf,
+glib,gtk4,
+libadwaita,
+libshumate,
+pango,
+sqlite,
+darwin,
+alsa-lib,
+blueprint-compiler
+}:
 
 stdenv.mkDerivation rec {
   pname = "jogger";

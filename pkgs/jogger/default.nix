@@ -11,7 +11,8 @@ rustc,
 wrapGAppsHook4,
 cairo,
 gdk-pixbuf,
-glib,gtk4,
+glib,
+gtk4,
 libadwaita,
 libshumate,
 pango,
@@ -19,7 +20,9 @@ sqlite,
 darwin,
 alsa-lib,
 blueprint-compiler,
-desktop-file-utils
+desktop-file-utils,
+libxml2,
+espeak
 }:
 
 stdenv.mkDerivation rec {

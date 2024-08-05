@@ -58,7 +58,7 @@ stdenv.mkDerivation rec {
     description = "Visual Voicemail Player";
     homepage = "https://gitlab.com/kop316/vvmplayer";
     license = licenses.gpl3Only;
-    maintainers = with maintainers; [ mich-adams ];
+    #maintainers = with maintainers; [ mich-adams ];
     mainProgram = "vvmplayer";
     platforms = platforms.all;
   };

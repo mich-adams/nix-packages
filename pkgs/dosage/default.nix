@@ -43,7 +43,7 @@ stdenv.mkDerivation rec {
     description = "Medication tracker for Linux";
     homepage = "https://github.com/diegopvlk/Dosage";
     license = licenses.gpl3Only;
-    maintainers = with maintainers; [ mich-adams ];
+    #maintainers = with maintainers; [ mich-adams ];
     platforms = platforms.linux;
     mainProgram = "dosage";
   };

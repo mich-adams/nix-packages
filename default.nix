@@ -12,6 +12,10 @@
   # The `lib`, `modules`, and `overlays` names are special
   lib = import ./lib { inherit pkgs; }; # functions
   modules = import ./modules; # NixOS modules
+  hmModules = rec {
+    modules = pkgs.lib.attrValues rawModules;
+    rawModules = import ./modules/home-manager;
+  };
   overlays = import ./overlays; # nixpkgs overlays
 
   #example-package = pkgs.callPackage ./pkgs/example-package { };

@@ -2,7 +2,8 @@
 lib,
 stdenv,
 fetchFromGitea,
-cargo,meson,
+cargo,
+meson,
 ninja,
 pkg-config,
 rustPlatform,
@@ -17,7 +18,8 @@ pango,
 sqlite,
 darwin,
 alsa-lib,
-blueprint-compiler
+blueprint-compiler,
+desktop-file-utils
 }:
 
 stdenv.mkDerivation rec {

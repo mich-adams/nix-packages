@@ -49,7 +49,7 @@ stdenv.mkDerivation rec {
     homepage = "https://gitlab.com/kop316/vvmd";
     changelog = "https://gitlab.com/kop316/vvmd/-/blob/${src.rev}/ChangeLog";
     license = licenses.gpl2;
-    maintainers = with maintainers; [ mich-adams ];
+    #maintainers = with maintainers; [ mich-adams ];
     mainProgram = "vvmd";
     platforms = platforms.linux;
   };

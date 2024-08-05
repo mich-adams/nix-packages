@@ -1,4 +1,23 @@
-{ lib, stdenv, fetchFromGitHub, libadwaita, pkg-config, meson, ninja, gjs, gobject-introspection, gtk4, desktop-file-utils, glib, blueprint-compiler, libportal, xdp-tools, gettext, wrapGAppsHook }:
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+  libadwaita,
+  pkg-config,
+  meson,
+  ninja,
+  gjs,
+  gobject-introspection,
+  gtk4,
+  desktop-file-utils,
+  glib,
+  blueprint-compiler,
+  libportal,
+  xdp-tools,
+  gettext,
+  wrapGAppsHook,
+  gst_all_1
+}:
 
 stdenv.mkDerivation rec {
   pname = "dosage";
@@ -11,7 +30,7 @@ stdenv.mkDerivation rec {
     hash = "sha256-RjF+untlhejyALj2juHWcYfEIcg7MDYNyCL3mFtyZMc=";
   };
 
-  nativeBuildInputs = [ pkg-config meson ninja desktop-file-utils blueprint-compiler libportal gjs gobject-introspection xdp-tools gettext glib gtk4 libadwaita wrapGAppsHook ];
+  nativeBuildInputs = [ pkg-config meson ninja desktop-file-utils blueprint-compiler libportal gjs gobject-introspection xdp-tools gettext glib gtk4 libadwaita wrapGAppsHook gst_all_1.gstreamer ];
 
   buildInputs = [ glib gtk4 libadwaita ];
 

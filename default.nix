@@ -22,4 +22,6 @@
   jogger = pkgs.callPackage ./pkgs/jogger { };
   my-gnu-health = pkgs.callPackage ./pkgs/my-gnu-health { };
   upscaler = pkgs.callPackage ./pkgs/upscaler { };
+  vvmd = pkgs.callPackage ./pkgs/vvmd.nix {};
+  vvmplayer = pkgs.callPackage ./pkgs/vvmplayer {};
 }

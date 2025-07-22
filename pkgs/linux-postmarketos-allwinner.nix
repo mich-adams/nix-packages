@@ -8,7 +8,7 @@
   features ? null,
   kernelPatches ? null,
   randstructSeed ? "",
-}:
+}@args:
 
 let
   pmaports = fetchFromGitLab {
@@ -32,8 +32,7 @@ let
     patch = "${pmaports}/device/community/linux-postmarketos-allwinner/${name}.patch";
   };
   defconfigStr =
-	#(builtins.readFile "${pmaports}/device/community/linux-postmarketos-allwinner/config-postmarketos-allwinner.aarch64")
-	(builtins.readFile ./config.aarch64)
+	(builtins.readFile "${pmaports}/device/community/linux-postmarketos-allwinner/config-postmarketos-allwinner.aarch64")
     + ''
       #
       # Extra nixpkgs-specific options
@@ -44,7 +43,6 @@ let
       CONFIG_DMIID=y
       CONFIG_IP_NF_MATCH_RPFILTER=y
       CONFIG_DEBUG_INFO_BTF=n
-      CONFIG_AXP288_FUEL_GAUGE=y
     '';
 
 in

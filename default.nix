@@ -12,6 +12,6 @@
   vvmd = pkgs.callPackage ./pkgs/vvmd.nix { };
   vvmplayer = pkgs.callPackage ./pkgs/vvmplayer.nix { };
   afterglow-cursors = pkgs.callPackage ./pkgs/afterglow-cursors.nix { };
-    #linux-postmarketos-allwinner = pkgs.pkgsCross.aarch64-multiplatform.callPackage ./pkgs/linux-postmarketos-allwinner.nix { };
+    linux-postmarketos-allwinner = pkgs.pkgsCross.aarch64-multiplatform.callPackage ./pkgs/linux-postmarketos-allwinner.nix { };
     #crust-firmware = pkgs.callPackage ./pkgs/crust-firmware.nix { };
 }

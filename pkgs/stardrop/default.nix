@@ -26,7 +26,7 @@ zip,
   };
 
 
-    projectFile = "./Stardrop/Stardrop.sln";
+    projectFile = "Stardrop/Stardrop.sln";
     executables = [ "Stardrop" ];
 
     dotnet-sdk = dotnet-sdk_8;
@@ -42,7 +42,7 @@ zip,
     ];
             dotnetFlags = [ "-p:SelfContained=false" "-p:RuntimeIdentifier=" ];
     postInstall = ''
-                      install -Dm644 "./Stardrop/Assets/stardrop.svg" \
+                      install -Dm644 "Stardrop/Assets/stardrop.svg" \
                         "$out/share/icons/hicolor/scaleable/apps/stardrop.svg"
 	'';
 
@@ -64,7 +64,7 @@ zip,
     description = "Open-source, cross-platform mod manager for the game Stardew Valley";
     homepage = "https://github.com/Floogen/Stardrop";
     license = lib.licenses.gpl3Only;
-    platforms = lib.platforms.all;
+    platforms = ["x86_64-linux"];
   };
 }
 

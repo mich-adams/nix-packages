@@ -32,7 +32,8 @@ let
     patch = "${pmaports}/device/community/linux-postmarketos-allwinner/${name}.patch";
   };
   defconfigStr =
-	(builtins.readFile "${pmaports}/device/community/linux-postmarketos-allwinner/config-postmarketos-allwinner.aarch64")
+	(builtins.readFile ./linux-postmarketos-allwinner.aarch64)
+	#(builtins.readFile "${pmaports}/device/community/linux-postmarketos-allwinner/config-postmarketos-allwinner.aarch64")
     + ''
       #
       # Extra nixpkgs-specific options
